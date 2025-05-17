@@ -23,7 +23,7 @@ app.use("/api/tasks", taskRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // MongoDB connection
-const MONGODB = process.env.MONGODB || "mongodb://localhost:27017/taskforget";
+const MONGODB = process.env.MONGO_URI || "mongodb://localhost:27017/taskforget";
 
 mongoose
   .connect(MONGODB)
